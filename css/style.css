@@ -2,6 +2,7 @@
 
 :root{
     --color-grey-10: #BEBEBE;
+    --color-grey-15: #707070;
     --color-grey-20: #F5F5F5;
     --color-white: #FFFFFF;
     --color-red: #FF7373;
@@ -20,10 +21,11 @@
     background-color: var(--color-white);
     color: var(--color-darkblue);
     border-radius: 50%;
-    padding: 5.5px 8px;
+    padding: 7px 10px;
 }
     .icon:hover{
-        color: var(--color-red);
+        color: var(--color-white);
+        background-color: var(--color-darkblue);
     }
 
 .btnn{
@@ -123,56 +125,148 @@
                 border-right: 2px solid var(--color-white);
                 border-bottom: 2px solid var(--color-white); 
             }
-        
+
+.card{
+    position: relative;
+    width: 18rem;
+    height: 350px;
+    overflow: hidden;
+    border: var(--color-white);
+    margin: 0 1rem;
+}
+    .card .card-body{
+        line-height: 0;
+        background-color: var(--color-white);
+        width: 100%;
+        z-index: 2;
+    }
+        .card .card-body p{
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.8rem;
+            color: var(--color-lightblue);
+        }
+        .card .card-body h6{
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            color: var(--color-darkblue);
+        }
+        .card .card-body i{
+            color: var(--color-red);
+            margin-bottom: 1rem;
+        }
+        .card .card-body .old-price{
+            text-decoration: line-through;
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-regular);
+            color: var(--color-lightblue);
+            margin-right: 0.3rem;
+        }
+        .card .card-body .new-price{
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-darkblue);
+        }
+    .card .card-icons{
+        position: absolute;
+        list-style: none;
+        top: 100%;
+        right: 1rem;
+        transition: top 0.5s ease-in-out;
+        z-index: 1;
+    }
+        .card:hover .card-icons{
+            top: 20px;
+        }
+        .card .card-icons li{
+            margin: 1rem 0;
+        }
+    .card button{
+        position: absolute;
+        list-style: none;
+        top: 100%;
+        width: 100%;
+        transition: top 0.5s ease-in-out;
+        z-index: 1;  
+    }
+        .card:hover button{
+            top: 54%;
+        }
+
+    .card .card-background{
+        position: absolute;
+        bottom: 5%;
+        height: 0;
+        width: 100%;
+        background-color: var(--color-grey-10);
+        transition: height 0.5s ease-in-out;
+        z-index: 0;
+    }
+        .card:hover .card-background{
+            height: 100%;
+        }
 
 
 /* top menu */
 .top-menu{
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: var(--color-grey-20);
-    color: var(--color-darkblue);
-    padding: 0.5rem;   
+    text-align: center;
 }
-    .top-menu .menu-links a{
+    .top-menu  .container-fluid{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--color-grey-20);
         color: var(--color-darkblue);
-        text-decoration: none;
-        margin: 0 1.3rem;
-        font-size: 1rem;
-        font-weight: var(--font-weight-semibold);                                                                               ht: var(--font-weight-medium);
-        font-family: var(--font-poppins);
+        padding: 0.5rem;
+        max-width: 1920;
     }
-        .top-menu .menu-links a:hover{
-            color: var(--color-red);
+        .top-menu .menu-links a{
+            color: var(--color-darkblue);
+            text-decoration: none;
+            margin: 0 1.3rem;
+            font-size: 1.2rem;
+            font-weight: var(--font-weight-medium);                                                                               ht: var(--font-weight-medium);
+            font-family: var(--font-poppins);
         }
+            .top-menu .menu-links a:hover{
+                color: var(--color-red);
+            }
 
-    .top-menu .menu-icons a{
-        margin: 0 0.3rem;
-    }
-    .top-menu .menu-icons #heart,
-    .top-menu .menu-icons #cart{
-        position: relative;
-    }
-        .top-menu .menu-icons #heart .badge,
-        .top-menu .menu-icons #cart .badge{
-            position: absolute;
-            background-color: var(--color-red);
-            top: -0.4rem;
-            left: 0.9rem;
-            font-size: 0.6rem;
-        } 
-        .top-menu .menu-icons #heart:hover .badge,
-        .top-menu .menu-icons #cart:hover .badge{
-            background-color: var(--color-darkblue);
-        } 
+        .top-menu .menu-icons a{
+            margin: 0 0.3rem;
+        }
+        .top-menu .menu-icons #heart,
+        .top-menu .menu-icons #cart{
+            position: relative;
+        }
+            .top-menu .menu-icons #heart .badge,
+            .top-menu .menu-icons #cart .badge{
+                position: absolute;
+                background-color: var(--color-red);
+                top: -0.4rem;
+                left: 0.9rem;
+                font-size: 0.6rem;
+            } 
+            .top-menu .menu-icons #heart:hover .badge,
+            .top-menu .menu-icons #cart:hover .badge{
+                background-color: var(--color-darkblue);
+            } 
         
 /* showcase */
 .showcase{
+    display: flex;
+    background-color: var(--color-grey-20);
+    justify-content: center;
+}
+.showcase .container-fluid{
     background-color: var(--color-grey-20);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
+    max-width: 1920px;
 }
     .showcase img{
         height: 846px;
@@ -181,6 +275,7 @@
     .showcase .showcase-body{
         align-items: center;
         text-align: center;
+        margin: 0 1rem;
     }
         .showcase .showcase-body h1{
             color: var(--color-darkblue);
@@ -193,6 +288,17 @@
             font-weight: var(--font-weight-regular);
             color: var(--color-darkblue);
         }
+/* cards delen */
+.new{
+    text-align: center;
+    margin-top: 8rem;
+}
+    .new > .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
 
 /* top picks */
 .top-picks{
@@ -258,9 +364,75 @@
                 margin-bottom: 2rem;
                 margin-top: 0.5rem;
             }
+                .web-info .info-box:hover .info-text h2{
+                    color: var(--color-red);
+                }
             .web-info .info-box .info-text p{
                 font-size: 1rem;
                 font-weight: var(--font-weight-regular);
                 color: var(--color-lightblue);
                 margin-bottom: 1.6rem;
             }
+                .web-info .info-box:hover .info-text p{
+                    color: var(--color-red);
+                }
+
+/* footer social-media */
+.social-media {
+    background-color: var(--color-grey-20);
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+    .social-media a{
+        color: var(--color-darkblue);
+        margin: 0 0.5rem;
+    }
+        .social-media a:hover{
+            color: var(--color-red);
+        }
+    .social-media h6{
+        font-family: var(--font-poppins);
+        font-weight: var(--font-weight-regular);
+        font-size: 1rem;
+        color: var(--color-grey-15);
+    }
+
+
+
+
+/* page 2 contacts */
+.house-contacts{
+    margin-top: 4rem;
+}
+    .house-contacts a{
+        color: var(--color-darkblue);
+        font-family: var(--font-poppins);
+        font-weight: var(--font-weight-medium);
+        font-size: 1rem;
+        text-decoration: none;
+    }
+.map-img{
+    align-items: center;
+    text-align: center;
+}
+.contact-us h6{
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+    color: var(--color-darkblue);
+}
+.btn-form{
+    display: inline;
+    height: 45px;
+    width: 15%;
+    margin-top: 1rem;
+    background-color: var(--color-red);
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    border: none;
+}
+    .btn-form:hover{
+        background-color: var(--color-lightblue);
+    }
