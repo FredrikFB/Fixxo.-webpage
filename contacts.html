@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-        <div class="top-menu">
-            <div class="container-fluid">
+        <nav class="top-menu">
+            <div class="container">
                 <div class="brand">
                     <a href="#"><img src="images/logo.svg" alt="Fixxo. logo"></a>
                 </div>
@@ -20,16 +20,16 @@
                     <a href="index.html">Home</a>
                     <a href="#">Categories</a>
                     <a href="#">Products</a>
-                    <a href="#">Contacts</a>
+                    <a href="#" class="active">Contacts</a>
                 </div>
                 <div class="menu-icons">
-                    <a class="icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a>              
-                    <a class="icon" href="#"><i class="fa-regular fa-code-compare fa-flip-horizontal"></i></a>
-                    <a  id="heart" class="icon" href="#"><span class="badge rounded-pill">1</span><i class="fa-regular fa-heart"></i></a>        
-                    <a id="cart" class="icon" href="#"><span class="badge rounded-pill">3</span><i class="fa-regular fa-bag-shopping"></i></a>
+                    <a href="#" class="icon"><i class="fa-regular fa-magnifying-glass"></i></a>              
+                    <a href="#" class="icon"><i class="fa-regular fa-code-compare fa-flip-horizontal"></i></a>
+                    <a href="#" id="heart" class="icon"><span class="badge rounded-pill">1</span><i class="fa-regular fa-heart"></i></a>        
+                    <a href="#" id="cart" class="icon"><span class="badge rounded-pill">3</span><i class="fa-regular fa-bag-shopping"></i></a>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <div class="house-contacts">
@@ -45,13 +45,13 @@
     <section>
         <div class="contact-us">
             <div class="container">
-                <div class="row mt-5">
-                    <!-- <h6>Come in Contact with Us</h6> -->
+                <form novalidate class="row mt-5">
+                    <h6>Come in Contact with Us</h6>
                     <div class="col">
-                        <input id="name" type="text" class="form-control required" placeholder="Your name" aria-label="First name" >
+                        <input id="name" type="text" class="form-control" placeholder="Your name" required>
                     </div>
                     <div class="col">
-                        <input type="email" class="form-control required" placeholder="Your email" aria-label="email" required>
+                        <input type="email" class="form-control " placeholder="Your email" required>
                     </div>
                     <div>
                         <label for="exampleFormControlTextarea1" class="form-label"></label>
@@ -60,7 +60,7 @@
                     <div>
                         <button type="submit" class="btn-form">Post Comments</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
